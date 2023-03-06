@@ -1,0 +1,25 @@
+body {
+        text-align: center;
+        padding: 180px;
+        background-color: rgb(80, 240, 49);
+      }
+.cls-button
+{
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight:bold;
+  }
+  h1{
+    font-size: 50px;
+  }
+  .cls-link{
+    margin: 20px;
+    font-size: 20px;
+  }
+  a{
+      color:black;
+  }
+  

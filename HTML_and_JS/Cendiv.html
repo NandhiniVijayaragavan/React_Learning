@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Center div example</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <style>
+            .cls-maindiv {
+                padding: 40px 350px 0px 350px;
+                background: #f5f2f2;
+                border-style:none;
+                border-radius:10px;
+             }
+            .cls-nav{
+                background-color: rgb(78, 78, 210);
+                padding-bottom: 1px;
+               border-radius: 5px;
+                border:none;
+            }
+            .cls-nav h2 {
+                padding-top:10px;
+                padding-bottom: 10px;
+                text-align: center;
+                color:white;
+            }
+            input{
+                border:none;
+                border-bottom-style: groove;
+                inline-size: -webkit-fill-available;
+            }
+            input:focus{
+                outline: none;
+            }
+            .cls-form {
+                padding:20px;
+                background-color: white;
+            }
+            .font {
+                font-size: 18px;
+            }
+            label{
+	        color: #bfbebe;
+            font-size:medium;
+            font-family: arial;
+            }
+            .cls-row{
+	        padding-bottom: 20px;
+            }
+            .btn-secondary {
+                background-color: rgb(151, 152, 152);
+            }
+        </style>
+    </head>
+    <body class="cls-bk">
+        <header>
+        </header>
+        <div class="cls-maindiv">
+            <div class="cls-nav">
+                <h2> Material Design Sign Up Form</h2>
+            </div>    
+            <div class="cls-form">
+                <form>
+                        <div class="row cls-row">
+                            <div class="col-sm-6">
+                                <label for="fname">First name</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lname">Last name</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" id="fname" value="" placeholder="Your first name" class="font"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" id="lname" value="" placeholder="Your last name" class="font"/><br>
+                            </div>
+                        </div>    
+                        <div class="row cls-row">
+                            <div class="col-sm-2">
+                                <label for = "gender">Gender:</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <input type="radio" name="gender" value="Male" checked>
+                                <input type="radio" name="gender" value="female" checked/>
+                            </div>
+                            <div class="col-sm-3">
+                                <div>Male</div>
+                                <div>Female</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for = "age">Age:</label>
+                                <input type="number" value="" id="age" placeholder="20" required />
+                            </div>
+                        </div>
+                        <div class="row cls-row">
+                            <div class="col-sm-12">
+                                <label for = "email">Email:</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="email" value="" id="email" placeholder="example@gmail.com" required />
+                            </div>
+                        </div>
+                        <div class = "row cls-row">
+                            <div class="col-sm-6">
+                                <label for = "pwd">Password</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for ="cpwd">Confirm Password</label>
+                            </div>
+    
+                            <div class="col-sm-6">
+                                <input type="password" value="" id="pwd" placeholder="********" required />
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="password" value="" id="cpwd" placeholder="********" required/>
+                            </div>
+                        </div>
+                        <div class="row cls-row">
+                            <div class="col-sm-12">
+                                <input type="submit" class="btn btn-secondary btn-block" onclick="submitForm()" value="SUBMIT">
+                            </div>
+                        </div>
+                        <div class="row cls-row">
+                            <div class="col-sm-12">
+                                <input type="button" class="btn btn-primary btn-block" value="CODE PEN LOGIN FORM"/>
+                            </div>
+                        </div>   
+                    </form>
+                </div>
+        </div>
+    </body>
+</html>
