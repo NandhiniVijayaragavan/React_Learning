@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your name <input type="text" id="a"/> <br><br>
+    Enter your partner name <input type="text" id="b"/> <br><br>
+    <input onclick="getdata()" type="submit" value="Get RelationShip"/> 
+    <script>
+        var flames;
+        var counting = 0;
+        function getdata() {
+            this.flames = 'flames';
+            var c= ((document.getElementById('a').value).replace(' ','')).toLowerCase().split('');
+            var d= ((document.getElementById('b').value).replace(' ','')).toLowerCase().split('');
+            for(var i=0;i<c.length; i++) {
+                for(var j=0;j<d.length; j++) {
+                    if(c[i]==d[j]) {
+                        c[i]='*';
+                        d[j]='*';
+                    }
+                }
+            }
+            var cl=0;
+            for(i=0; i<c.length;i++) {
+                if(c[i]!='*'){
+                    cl++;
+                }
+            }
+            for(j=0; j<d.length;j++) {
+                if(d[j]!='*'){
+                    cl++;
+                }
+            }
+            this.counting=0;
+            getFlames(cl);
+            switch (this.flames) {
+                case 'f':
+                    alert('Your Relationship : Friends')
+                    break;
+                case 'l':
+                    alert('Your Relationship : Love')
+                    break;
+                case 'a':
+                    alert('Your Relationship : Affection')
+                    break;
+                case 'm':
+                    alert('Your Relationship : Marriage')
+                    break;
+                case 'e':
+                    alert('Your Relationship : Enemy')
+                    break;
+                case 's':
+                    alert('Your Relationship : Sisters')
+                    break;
+            }
+        }   
+        function getFlames(count) {
+            for(i=0;i<this.flames.length;i++) {
+                this.counting++;
+                if(this.counting == count) {
+                    var removeLetter = this.flames[i];
+                    this.counting=0;
+                }
+            }
+            this.flames=this.flames.replace(removeLetter,'');
+            if(this.flames.length != 1){
+                getFlames(count);
+            }
+        }
+    </script>
+</body>
+</html>

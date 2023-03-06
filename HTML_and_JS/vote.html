@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" id="a"/>
+    <br><br>
+    <input type="submit" onclick="check(event.target.value)" value="Check Eligibility"/>
+    <script>
+        function check() {
+            var c = document.getElementById('a');
+            if (c.value<18) {
+                alert("You are not eligible for voting")
+            }
+            else {
+            alert("You are eligible for voting")
+            }
+        }
+    </script>
+</body>
+</html>
